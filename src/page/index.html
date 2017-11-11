@@ -1,0 +1,47 @@
+
+
+<audio id="audio" src=""></audio>
+<div class="center" data-audio="static/index-bgm.mp3" ng-click="playAudio()">
+	<div class="top"></div>
+	<div class="left-ghost"></div>
+	<div class="left"></div>
+	<div class="right" data-audio="static/clickcondy.mp3"></div>
+	<div class="condy-one" ng-click="goNextPage($event)"></div>
+	<div class="condy-two" ng-click="goNextPage($event)"></div>
+	<div class="condy-three" ng-click="goNextPage($event)"></div>
+</div>
+
+<div class="my-prize" ng-click="showMyPrize()"></div>
+
+<div class="btn-get" ng-click="getCondy()" data-audio="static/knock.mp3"></div>
+<div class="btn-rule" ng-click="openCover()"></div>
+<p class="time">剩余敲门次数 <span class="point-word">{{times}}</span> 次</p>
+
+<div class="cover" ng-show="showCover">
+	<div class="rule-box">
+		<div class="close-btn" ng-click="closeCover()"></div>
+	</div>
+</div>
+
+<div class="cover-hint" ng-show="showHintCover">
+	<div class="hint-box">
+		<div class="btn-close" ng-click="closeHintCover()"></div>
+		<p class="hint-title">- 您还未登录 -</p>
+		<p class="hint-text">请在APP首页，点击【父母中心】</p>
+		<p class="hint-text"><img src="static/dot.png" alt="" />【设置】<img src="static/dot.png" alt="" />【登录】登录后继续</p>
+		<p class="hint-title-two">- 抽奖次数用光啦 -</p>
+		<p class="hint-title-three">花0.1元钱，将得到5次继续讨糖果机会</p>
+		<div class="hint-btn" ng-show="showPaybtn" ng-click="goPay()">去支付</div>
+	</div>
+</div>
+
+<div class="prize-cover" ng-show="showPrizeCover">
+	<div class="prize-close" ng-click="closePrizeCover()"></div>
+	<div class="prize-box">
+		<div class="prize-list">
+			<p class="prize-item" ng-repeat="prize in prizeList"><img src="static/head.png" alt="" />{{prize.prize_name}}</p>			
+		</div>
+	</div>
+</div>
+
+<img style="display: none;" src="static/rule.png" alt="" />

@@ -1,0 +1,29 @@
+
+<div class="top-one" ng-show="showOne">
+	<div class="award-freeopen" ng-show="showFreeOpen"></div>
+	<div class="award-credits" ng-show="showCredits"></div>
+	<div class="award-ticketOne" ng-show="showTicketOne"></div>
+	<div class="award-ticketTwo" ng-show="showTicketTwo"></div>
+	<div class="award-cloth" ng-show="showCloth"></div>
+	<p class="hint">花0.1元钱，将得到5次继续讨糖果机会</p>
+	<div class="btn-pay" ng-click="goPay()"></div>
+	<div class="btn-back" ng-click="goBack()"></div>
+</div>
+
+<div class="top-two" ng-show="!showOne">
+	<div class="award-building" ng-show="showBuilding"></div>
+	<div class="award-threePiece" ng-show="showThreePiece"></div>
+	<p class="hint">花0.1元钱，将得到5次继续讨糖果机会</p>	
+	<p class="title"><img src="static/loco.png" alt="" />  请填写收货地址</p>
+	<p class="box name">姓名：<input class="ipt ipt-name" type="text" /></p>
+	<p class="box loco">地址：<input class="ipt ipt-loco" type="text" /></p>
+	<p class="box phone">手机：<input class="ipt ipt-phone" type="text" /></p>			
+	<div class="btn-ok" ng-click="goUpdata()"></div>
+</div>
+
+<div class="cover-hint" ng-show="showHintCover">
+	<div class="hint-box">				
+		<p class="hint-title-two">- 抽奖次数用光啦 -</p>
+		<div class="hint-btn" ng-click="closeHintCover()">知道了</div>
+	</div>
+</div>
